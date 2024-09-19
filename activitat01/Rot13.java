@@ -63,7 +63,7 @@ public class Rot13 {
         // devuelve el texto despues de haberlo descifrado
         return xifrat;
     }
-    //Este metodo modifica el caracter que recibe dependiendo de la suma 
+    //Este metodo modifica el caracter que recibe dependiendo de si se quiere cifrar 
     public static char caracterXifrat(char[] letras, char caracter, boolean cifrado) {
         // inicializa el caracter que se devolvera y la posicion que tendra el caracter recibido en la array
         char xifrat;
