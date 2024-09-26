@@ -6,12 +6,15 @@ public class Rot13 {
     public static void main(String[] args) {
         //char[] letras = abecedario(true);
         //print(letras);
-        System.out.print("Texto inicial: ");
-        String text = Entrada.readLine();
-        text = xifraRot13(text);
-        System.out.println("Texto cifrado: " + text);
-        text = desxifraRot13(text);
-        System.out.println("Texto descifrado: " + text);
+        String[] test = {"Hola", "Adios", "Prueba de cifrado!", "Que tal?", "ÀÁ, ÈÉ, ÍÏ, ÒÓ, ÚÜ, Ç."};
+        for(String text : test) {
+            System.out.println("Texto inicial: " + text);
+            text = xifraRot13(text);
+            System.out.println("Texto cifrado: " + text);
+            text = desxifraRot13(text);
+            System.out.println("Texto descifrado: " + text);
+            System.out.println();
+        }    
     }
     //Este metodo codifica la texto que recibe con rot13
     public static String xifraRot13(String text) {
@@ -77,7 +80,7 @@ public class Rot13 {
             // como quiere cifrar sumamos 13
             pos+=13;
             // si pos es mas grande que la array
-            if(pos>letras.length) {
+            if(pos>=letras.length) {
                 // restamos la longitud de la array
                 pos-=letras.length;
             }
