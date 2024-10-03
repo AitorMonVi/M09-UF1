@@ -86,6 +86,7 @@ public class Monoalfabet {
         String[] tests = {"Hola", "à ï ?,.ú", "AdIos pEPe", "aàábcçdeèéfghiíïjklmnñoòópqrstuúüvwxyz"};
 
         for(String test : tests) {
+        
             System.out.println(test);
 
             System.out.println(xifraMonoAlfa(test));
@@ -93,6 +94,5 @@ public class Monoalfabet {
             System.out.println(desxifraMonoAlfa(xifraMonoAlfa(test)));
             System.out.println();
         }
-        
     }       
 }
