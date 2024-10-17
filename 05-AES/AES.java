@@ -23,8 +23,7 @@ public class AES {
 
         // Genera IvParameterSpec
         byte[] iv = new byte[MIDA_IV];
-        SecureRandom random = new SecureRandom();
-        random.nextBytes(iv);
+        new SecureRandom().nextBytes(iv);
         IvParameterSpec ivParameterSpec = new IvParameterSpec(iv);
 
         // Genera hash
