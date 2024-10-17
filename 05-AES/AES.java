@@ -92,9 +92,9 @@ public class AES {
                 xifrat=xifraAES(msg, CLAU);
                 desxifrat=desxifraAES(xifrat, CLAU);
             } catch(Exception e) {
-                //System.err.println("Error de xifrat: " + e.getLocalizedMessage());
-                System.out.println("Error de xifrat: ");
-                e.printStackTrace();
+                System.err.println("Error de xifrat: " + e.getLocalizedMessage());
+                //System.out.println("Error de xifrat: ");
+                //e.printStackTrace();
             }
             System.out.println("--------------------");
             System.out.println("Msg: " + msg);
