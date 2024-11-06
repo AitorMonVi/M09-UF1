@@ -7,7 +7,7 @@
  * otros metodos.
  */
 
- package src.main.java.iticbcn.xifratge;
+ package iticbcn.xifratge;
 
 public class XifradorRotX implements Xifrador {
 

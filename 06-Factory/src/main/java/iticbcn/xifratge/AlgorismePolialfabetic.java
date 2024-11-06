@@ -1,4 +1,4 @@
-package src.main.java.iticbcn.xifratge;
+package iticbcn.xifratge;
 
 public class AlgorismePolialfabetic extends AlgorismeFactory {
     public Xifrador creaXifrador() {

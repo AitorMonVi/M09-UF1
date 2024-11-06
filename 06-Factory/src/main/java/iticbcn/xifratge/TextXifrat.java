@@ -1,4 +1,4 @@
-package src.main.java.iticbcn.xifratge;
+package iticbcn.xifratge;
 
 public class TextXifrat {
     // atributos
@@ -16,4 +16,5 @@ public class TextXifrat {
     }
 
     public byte[] getBytes() { return info.clone(); }
+
 }

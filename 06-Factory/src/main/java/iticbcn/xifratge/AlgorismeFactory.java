@@ -1,4 +1,4 @@
-package src.main.java.iticbcn.xifratge;
+package iticbcn.xifratge;
 
 public abstract class AlgorismeFactory {
     public abstract Xifrador creaXifrador();

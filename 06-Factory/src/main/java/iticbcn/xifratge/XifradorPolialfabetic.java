@@ -1,11 +1,11 @@
 /* */
 
-package src.main.java.iticbcn.xifratge;
+package iticbcn.xifratge;
 
 import java.util.Random;
 
-import src.main.java.iticbcn.xifratge.ClauNoSuportada;
-import src.main.java.iticbcn.xifratge.TextXifrat;
+import iticbcn.xifratge.ClauNoSuportada;
+import iticbcn.xifratge.TextXifrat;
 
 import java.util.List;
 import java.util.Collections;

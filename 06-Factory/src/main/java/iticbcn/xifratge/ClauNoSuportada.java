@@ -1,4 +1,4 @@
-package src.main.java.iticbcn.xifratge;
+package iticbcn.xifratge;
 
 @SuppressWarnings("serial")
 public class ClauNoSuportada extends Exception {
