@@ -19,11 +19,25 @@ public class XifradorRotX implements Xifrador {
 
     // creamos los metodos a implementar
     public TextXifrat xifra(String msg, String key) throws ClauNoSuportada {
-        TextXifrat xifrat = new TextXifrat(xifraRotX(msg, Integer.parseInt(key)).getBytes());
+        int clave;
+        try {
+            clave = Integer.parseInt(key);
+            if(clave<0 || clave>40) return new TextXifrat("Clau de RotX ha de ser un sencer de 0 a 40".getBytes());
+        } catch(NumberFormatException e) {
+            return new TextXifrat("Clau de RotX ha de ser un sencer de 0 a 40".getBytes());
+        }
+        TextXifrat xifrat = new TextXifrat(xifraRotX(msg, clave).getBytes());
         return xifrat;
     }
     public String desxifra(TextXifrat msg, String key) throws ClauNoSuportada {
-        return desxifraRotX(msg.toString(), Integer.parseInt(key));
+        int clave;
+        try {
+            clave = Integer.parseInt(key);
+            if(clave<0 || clave>40) return "Clau de RotX ha de ser un sencer de 0 a 40";
+        } catch(NumberFormatException e) {
+            return "Clau de RotX ha de ser un sencer de 0 a 40";
+        }
+        return desxifraRotX(msg.toString(), clave);
     }
 
     // Este metodo a partir de un numero que reciba cifrara el texto
