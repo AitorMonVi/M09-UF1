@@ -3,13 +3,17 @@
 package src.main.java.iticbcn.xifratge;
 
 import java.util.Random;
+
+import src.main.java.iticbcn.xifratge.ClauNoSuportada;
+import src.main.java.iticbcn.xifratge.TextXifrat;
+
 import java.util.List;
 import java.util.Collections;
 import java.util.Arrays;
 
 public class XifradorPolialfabetic implements Xifrador {
     // creamos variables globals
-    private static final long KEY = 186349724;
+    private static long KEY;
 
     private static final char[] ALFABETO = "aàábcçdeèéfghiíïjklmnñoòópqrstuúüvwxyz".toCharArray();
     private static char[] permutado;
@@ -21,10 +25,23 @@ public class XifradorPolialfabetic implements Xifrador {
 
     // creamos los metodos a implementar
     public TextXifrat xifra(String msg, String key) throws ClauNoSuportada {
-        return null;
+        try {
+            long keyL = Long.parseLong(key);
+            KEY = keyL;
+        } catch(NumberFormatException e) {
+            throw new ClauNoSuportada("La key recibida no es valida");
+        }
+        TextXifrat xifrat = new TextXifrat(xifraPoliAlfa(msg).getBytes());
+        return xifrat;
     }
     public String desxifra(TextXifrat msg, String key) throws ClauNoSuportada {
-        return null;
+        try {
+            long keyL = Long.parseLong(key);
+            KEY = keyL;
+        } catch(NumberFormatException e) {
+            throw new ClauNoSuportada("La key recibida no es valida");
+        }
+        return desxifraPoliAlfa(msg.toString());
     }
 
     // creamos los metodos principales

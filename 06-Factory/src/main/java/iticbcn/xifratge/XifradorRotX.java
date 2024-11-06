@@ -19,10 +19,11 @@ public class XifradorRotX implements Xifrador {
 
     // creamos los metodos a implementar
     public TextXifrat xifra(String msg, String key) throws ClauNoSuportada {
-        return null;
+        TextXifrat xifrat = new TextXifrat(xifraRotX(msg, Integer.parseInt(key)).getBytes());
+        return xifrat;
     }
     public String desxifra(TextXifrat msg, String key) throws ClauNoSuportada {
-        return null;
+        return desxifraRotX(msg.toString(), Integer.parseInt(key));
     }
 
     // Este metodo a partir de un numero que reciba cifrara el texto

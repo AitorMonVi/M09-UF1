@@ -5,6 +5,9 @@ package src.main.java.iticbcn.xifratge;
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
+
+import src.main.java.iticbcn.xifratge.TextXifrat;
+
 import java.security.MessageDigest;
 import java.security.SecureRandom;
 
@@ -22,10 +25,11 @@ public class XifradorAES implements Xifrador {
 
     // creamos los metodos a implementar
     public TextXifrat xifra(String msg, String key) throws ClauNoSuportada {
-        return null;
+        TextXifrat xifrat = new TextXifrat(xifraAES(msg, key));
+        return xifrat;
     }
     public String desxifra(TextXifrat msg, String key) throws ClauNoSuportada {
-        return null;
+        return desxifraAES(msg.getBytes(), key);
     }
 
     // creamos los metodos de cifrado
