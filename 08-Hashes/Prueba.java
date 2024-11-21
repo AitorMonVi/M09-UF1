@@ -126,7 +126,7 @@ public class Prueba {
     // main
     public static void main(String[] args) {
         String salt = "qpoweiruañslkdfjz";
-        String pw = "aaabF!";
+        String pw = "!!!bF!";
         Prueba h = new Prueba();
         String[] aHashes = { h.getSHA512AmbSalt(pw, salt),
                              h.getPBKDF2AmbSalt(pw, salt) };
